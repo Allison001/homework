@@ -1,0 +1,32 @@
+adds:
+  - [1,2,3]
+  - [100,200,300]
+  - [-10,100,90]
+idsa:
+  - "add_one"
+  - "add_two"
+  - "add_three"
+sub:
+  - [100,100,0]
+  - [20,0,20]
+  - [100,-100,200]
+idsb:
+  - "sub_one"
+  - "sub_two"
+  - "sub_three"
+mul:
+  - [10,10,100]
+  - [0,20,0]
+  - [-10,10,-100]
+idsc:
+  - "mul_one"
+  - "mul_two"
+  - "mul_three"
+div:
+  - [100,10,10]
+  - [-10,2,-5]
+  - [0,20,0]
+idsd:
+  - "div_one"
+  - "div_two"
+  - "div_three"
