@@ -18,10 +18,15 @@ def get_data():
         return [adds, idsa,sub,idsb,mul,idsc,div,idsd]
 
 class Test_Cala:
+    def setup_class(self):
+        print("验证开始啦！！！")
+    def teardown_class(self):
+        print("验证结束啦！！！")
     def setup(self):
+        print("开始计算")
         self.cal = Calculator()
     def teardown(self):
-        pass
+        print("计算结束")
 
     @pytest.mark.parametrize(["a","b","expect"],get_data()[0],ids=get_data()[1])
     def test_add(self,a,b,expect):
