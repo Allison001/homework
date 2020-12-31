@@ -2,31 +2,45 @@ adds:
   - [1,2,3]
   - [100,200,300]
   - [-10,100,90]
+  - [0.1,0.2,0.3]
+  - [" ",5,"请输入数字！"]
 idsa:
   - "add_one"
   - "add_two"
   - "add_three"
+  - "add_four"
+  - "add_five"
 sub:
   - [100,100,0]
   - [20,0,20]
   - [100,-100,200]
+  - [0.3,0.2,0.1]
+  - [" ",5,"请输入数字！"]
 idsb:
   - "sub_one"
   - "sub_two"
   - "sub_three"
+  - "sub_four"
+  - "sub_five"
 mul:
   - [10,10,100]
   - [0,20,0]
   - [-10,10,-100]
+  - [0.3,5,1.5]
+  - [" ",5,"请输入数字！"]
 idsc:
   - "mul_one"
   - "mul_two"
   - "mul_three"
+  - "mul_four"
+  - "mul_five"
 div:
   - [100,10,10]
   - [-10,2,-5]
   - [0,20,0]
+  - [5,0.1,50]
 idsd:
   - "div_one"
   - "div_two"
   - "div_three"
+  - "div_four"
