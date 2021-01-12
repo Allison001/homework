@@ -7,22 +7,23 @@ from selenium.webdriver.remote.webdriver import WebDriver
 class BasePage():
 
     def __init__(self,driver:WebDriver=None):
-        bro = webdriver.ChromeOptions()
-        bro.debugger_address = "127.0.0.1:9222"
+
+        # bro = webdriver.ChromeOptions()
+        # bro.debugger_address = "127.0.0.1:9222"
         if driver is None:
-            self.driver = webdriver.Chrome(options=bro)
+            self.driver = webdriver.Chrome()
+            self._cookie_login()
         else:
             self.driver = driver
-        self._cookie_login()
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
 
 
     def _cookie_login(self):
-        self.driver.get("https://work.weixin.qq.com/")
-        cookies = self.driver.get_cookies()
-        with open("cookies.json","w") as f:
-            json.dump(cookies,f)
+        # self.driver.get("https://work.weixin.qq.com/")
+        # cookies = self.driver.get_cookies()
+        # with open("cookies.json","w") as f:
+        #     json.dump(cookies,f)
 
 
         self.driver.get("https://work.weixin.qq.com/")
@@ -31,5 +32,5 @@ class BasePage():
         #注入cookies
         for i in cookes:
             self.driver.add_cookie(i)
-
+        self.driver.find_element_by_class_name("index_top_operation_loginBtn").click()
 

@@ -6,8 +6,8 @@ class TestCreatParty():
         self.main = MainPage()
 
     def teardown(self):
-        pass
+        self.main.driver.quit()
 
     def test_creat_party(self):
         result = self.main.goto_contacts().goto_creat_page().creat_party()
-        assert result == True
+        assert " Test1" in  result
