@@ -11,3 +11,7 @@ class TestCreatParty():
     def test_creat_party(self):
         result = self.main.goto_contacts().goto_creat_page().creat_party()
         assert " Test1" in  result
+
+    def test_creat_fail(self):
+        result = self.main.goto_contacts().goto_creat_page().creat_party_fril()
+        assert " Test1" not in   result
