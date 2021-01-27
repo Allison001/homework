@@ -13,3 +13,6 @@ class TestFrame():
     def test_search(self):
         element = self.main.goto_market().goto_search().search()
         assert element == "阿里巴巴概念"
+
+    def test_goto_main(self):
+        self.main.goto_my()
